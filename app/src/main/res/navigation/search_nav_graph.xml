@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_nav_graph"
+    app:startDestination="@id/fragment_search_media">
+
+    <fragment
+        android:id="@+id/fragment_search_media"
+        android:name="com.gurumi.kakaobankreport.ui.view.SearchMediaFragment"
+        android:label="검색"
+        tools:layout="@layout/fragment_search_media" />
+
+    <fragment
+        android:id="@+id/fragment_bookmark"
+        android:label="즐겨찾기"
+        android:name="com.gurumi.kakaobankreport.ui.view.BookmarkFragment"
+        tools:layout="@layout/fragment_bookmark"  />
+</navigation>

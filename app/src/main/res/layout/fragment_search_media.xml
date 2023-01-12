@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.gurumi.kakaobankreport.utils.ExtentionsKt"/>
+
+        <variable
+            name="viewModel"
+            type="com.gurumi.kakaobankreport.ui.viewmodel.SearchMediaViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/searchMediaLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:hint="@string/hint_search"
+            android:padding="4dp"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputSearchMedia"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textAutoComplete" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            bindThrowShowToast="@{viewModel.pagingViewState.loadState}"
+            paging_recycler_view_state="@{viewModel.pagingViewState}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scrollbars="vertical"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchMediaLayout"
+            app:spanCount="2"
+            tools:itemCount="10"
+            tools:listitem="@layout/row_image" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            bindIsVisibleOrGone="@{ExtentionsKt.isLoading(viewModel.pagingViewState.loadState)}"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:indeterminate="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

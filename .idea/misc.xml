@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.4359375" />
+        <entry key="app/src/main/res/drawable/ic_bookmarks.xml" value="0.408" />
+        <entry key="app/src/main/res/drawable/ic_media_search.xml" value="0.408" />
+        <entry key="app/src/main/res/drawable/selector_bookmark.xml" value="0.407" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.45" />
+        <entry key="app/src/main/res/layout/fragment_bookmark.xml" value="0.4046875" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.4046875" />
+        <entry key="app/src/main/res/layout/fragment_search_media.xml" value="0.4046875" />
+        <entry key="app/src/main/res/layout/layout_holder.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/row_empty.xml" value="0.4046875" />
+        <entry key="app/src/main/res/layout/row_image.xml" value="0.6953125" />
+        <entry key="app/src/main/res/layout/row_search_media.xml" value="0.6942708333333333" />
+        <entry key="app/src/main/res/layout/row_video.xml" value="0.4046875" />
+        <entry key="app/src/main/res/layout/row_videomedia.xml" value="0.4046875" />
+        <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.4046875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
